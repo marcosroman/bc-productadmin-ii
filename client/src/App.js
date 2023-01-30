@@ -20,15 +20,15 @@ const App = () => {
 					<Route path="/" element={
 						<>
 							<Form />
+							<hr/>
 							<ProductList />
 						</>}
 					/>
-					<Route path="/:id" element={<ProductDetail />}/>
+					<Route path="/:id" element=<ProductDetail /> />
 				</Routes>
 			</BrowserRouter>
 		</div>
   );
 }
 
-					//<Route path="/:id" element={<ProductDetail />} />
 export default App;

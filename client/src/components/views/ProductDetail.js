@@ -20,11 +20,15 @@ const ProductDetail = (props) => {
 	},[id]);
 
 	return (
-		<>
-			<h2>{product.title}</h2>
-			<p>Price: {product.price}</p>
-			<p>Description: {product.description}</p>
-		</>
+		<div className="container">
+			<div className="card">
+				<h2 className="card-title">{product.title}</h2>
+				<div className="card-body">
+					<p>Price: {product.price}</p>
+					<p>Description: {product.description}</p>
+				</div>
+			</div>
+		</div>
 	);
 }
 

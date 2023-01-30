@@ -13,15 +13,15 @@ const ProductList = props => {
 	},[]);
 
 	return (
-		<>
+		<div className="container">
 			<h2>Products</h2>
-			<ul>
+			<ul className="list-group">
 				{productList.map((item,index) =>
-					<li key={index}>
+					<li key={index} className="list-group-item">
 						<Link to={item._id}>{item.title}</Link>
 					</li>)}
 			</ul>
-		</>
+		</div>
 	);
 }
 

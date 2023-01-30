@@ -22,25 +22,31 @@ const Form = props => {
 	}
 
 	return (
+		<div className="container">
 		<form onSubmit={submitForm}>
 			<h1>Product Manager</h1>
-			<div>
-				<label>Titulo</label>
-				<input type="text" name="title"
+			<div className="form-group">
+				<label htmlFor="title">Titulo</label>
+				<input className="form-control"
+		           type="text" name="title"
 							 value={title} onChange={e => setTitle(e.target.value)} />
 			</div>
-			<div>
-				<label>Precio</label>
-				<input type="number" name="price"
+			<div className="form-group">
+				<label htmlFor="price">Precio</label>
+				<input className="form-control"
+		           type="number" name="price"
 							 value={price} onChange={e => setPrice(e.target.value)} />
 			</div>
-			<div>
-				<label>Descripcion</label>
-				<input type="text" name="description"
+			<div className="form-group">
+				<label htmlFor="description">Descripcion</label>
+				<input className="form-control"
+		           type="text" name="description"
 							 value={description} onChange={e => setDescription(e.target.value)} />
 			</div>
-			<input type="submit" value="Guardar"/>
+			<input className="btn btn-primary"
+		         type="submit" value="Guardar"/>
 		</form>
+		</div>
 	);
 }
 
