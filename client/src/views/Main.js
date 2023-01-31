@@ -1,5 +1,5 @@
-import Form from './Form';
-import ProductList from './views/ProductList';
+import Form from '../components/Form';
+import ProductList from './ProductList';
 
 const Main = (props) => {
 	return (
