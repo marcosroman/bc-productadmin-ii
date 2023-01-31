@@ -4,13 +4,16 @@ import axios from 'axios';
 
 const ProductList = (props) => {
 	const [productList, setProductList] = useState([]);
+	const {newSubmitted, setNewSubmitted} = props;
 
 	useEffect(() => {
 		axios.get("http://localhost:8000/api/products")
 				 .then(res => {
 					 console.log(res.data.product);
 					 setProductList(res.data.product)})
-	});
+		console.log('fetching via get');
+		if(newSubmitted) setNewSubmitted(false);
+	},[newSubmitted]);
 
 	return (
 		<div className="container">

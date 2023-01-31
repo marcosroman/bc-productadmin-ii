@@ -5,14 +5,17 @@ const Form = props => {
 	const [title, setTitle] = useState("");
 	const [price, setPrice] = useState("");
 	const [description, setDescription] = useState("");
+	const {setNewSubmitted} = props;
 	
 	const submitForm = (e) => {
 		e.preventDefault();
 
+		setNewSubmitted(true);
 		console.log(title,price,description);
 		axios.post('http://localhost:8000/api/products/new',
 							 {title, price, description})
 				 .then(res => {
+					 setNewSubmitted(true);
 					 setTitle("");
 					 setPrice("");
 					 setDescription("");
