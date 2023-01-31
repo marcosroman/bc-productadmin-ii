@@ -1,29 +1,14 @@
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Form from './components/Form';
-import ProductList from './components/views/ProductList';
+import Main from './components/Main';
 import ProductDetail from './components/views/ProductDetail';
 
 const App = () => {
-	/*
-  return (
-    <div className="App">
-			<Form />
-			<ProductList />
-		</div>
-  );
-	*/
   return (
     <div className="App">
 			<BrowserRouter>
 				<Routes>
-					<Route path="/" element={
-						<>
-							<Form />
-							<hr/>
-							<ProductList />
-						</>}
-					/>
+					<Route path="/" element=<Main /> />
 					<Route path="/:id" element=<ProductDetail /> />
 				</Routes>
 			</BrowserRouter>

@@ -10,7 +10,7 @@ const ProductList = (props) => {
 				 .then(res => {
 					 console.log(res.data.product);
 					 setProductList(res.data.product)})
-	},[]);
+	});
 
 	return (
 		<div className="container">

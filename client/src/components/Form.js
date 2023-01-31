@@ -1,11 +1,10 @@
-import axios from 'axios';
 import {useState} from 'react';
+import axios from 'axios';
 
 const Form = props => {
 	const [title, setTitle] = useState("");
 	const [price, setPrice] = useState("");
 	const [description, setDescription] = useState("");
-	const {loadProducts} = props;
 	
 	const submitForm = (e) => {
 		e.preventDefault();
@@ -14,11 +13,9 @@ const Form = props => {
 		axios.post('http://localhost:8000/api/products/new',
 							 {title, price, description})
 				 .then(res => {
-					 loadProducts();
 					 setTitle("");
 					 setPrice("");
 					 setDescription("");
-					 console.log(res);
 				 })
 				 .catch(err => console.log(err));
 	}
